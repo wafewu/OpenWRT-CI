@@ -71,11 +71,12 @@ sed -i "s|ARMv8|ARMv8_PLUS|g" package/luci-app-amlogic/root/etc/config/amlogic
 git clone --depth=1 https://github.com/ximiTech/luci-app-msd_lite package/luci-app-msd_lite
 git clone --depth=1 https://github.com/ximiTech/msd_lite package/msd_lite
 
-# MosDNS
-#git clone --depth=1 https://github.com/sbwml/luci-app-mosdns package/luci-app-mosdns
-rm -rf feeds/packages/net/v2ray-geodata
-git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
-git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
+#MosDNS(sbwml)
+find ../feeds/ | grep Makefile | grep mosdns | xargs rm -f
+find ../feeds/ | grep Makefile | grep v2dat | xargs rm -f
+find ../feeds/ | grep Makefile | grep v2ray-geodata | xargs rm -f
+git clone --depth=1 --single-branch --branch "v5-lua" https://github.com/sbwml/luci-app-mosdns.git
+git clone --depth=1 --single-branch https://github.com/sbwml/v2ray-geodata.git
 
 # Alist
 #git clone --depth=1 https://github.com/sbwml/luci-app-alist package/luci-app-alist
