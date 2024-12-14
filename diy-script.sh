@@ -40,7 +40,6 @@ git clone --depth=1 https://github.com/destan19/OpenAppFilter package/OpenAppFil
 git_sparse_clone main https://github.com/Lienol/openwrt-package luci-app-filebrowser luci-app-ssr-mudb-server
 #git_sparse_clone openwrt-18.06 https://github.com/immortalwrt/luci applications/luci-app-eqos
 # git_sparse_clone master https://github.com/syb999/openwrt-19.07.1 package/network/services/msd_lite
-git clone --depth=1 https://github.com/sirpdboy/luci-theme-kucat package/luci-theme-kucat
 
 git_sparse_clon main https://github.com/morytyann/OpenWrt-mihomo luci-app-mihomo mihomo 
 #git_sparse_clon main https://github.com/kenzok8/small-package luci-app-adguardhome
@@ -53,9 +52,10 @@ git_sparse_clon main https://github.com/sirpdboy/sirpdboy-package luci-app-filea
 #git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall package/luci-app-passwall
 #git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall2 package/luci-app-passwall2
-#git_sparse_clone master https://github.com/vernesong/OpenClash luci-app-openclash
+git_sparse_clone master https://github.com/vernesong/OpenClash luci-app-openclash
 
 # Themes
+git clone --depth=1 https://github.com/sirpdboy/luci-theme-kucat package/luci-theme-kucat
 #git clone --depth=1 -b 18.06 https://github.com/kiddin9/luci-theme-edge package/luci-theme-edge
 git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
 #git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
