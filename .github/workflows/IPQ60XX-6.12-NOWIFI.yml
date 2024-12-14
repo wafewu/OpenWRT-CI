@@ -108,7 +108,7 @@ jobs:
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
 
-    - name: run DIY script(下载第三方源码)
+    - name: Run DIY script(运行自定义脚本)
       run: |
         chmod +x ${DIY_SCRIPT}
         cd $OPENWRT_PATH
