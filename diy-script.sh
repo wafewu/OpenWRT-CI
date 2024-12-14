@@ -20,14 +20,30 @@ rm -rf feeds/luci/applications/luci-app-netdata
 rm -rf feeds/luci/applications/luci-app-serverchan
 
 # Git稀疏克隆，只克隆指定目录到本地
+#function git_sparse_clone() {
+#  branch="$1" repourl="$2" && shift 2
+#  git clone --depth=1 -b $branch --single-branch --filter=blob:none --sparse $repourl
+#  repodir=$(echo $repourl | awk -F '/' '{print $(NF)}')
+#  cd $repodir && git sparse-checkout set $@
+#  mv -f $@ ../package
+#  cd .. && rm -rf $repodir
+#}
+
 function git_sparse_clone() {
-  branch="$1" repourl="$2" && shift 2
-  git clone --depth=1 -b $branch --single-branch --filter=blob:none --sparse $repourl
-  repodir=$(echo $repourl | awk -F '/' '{print $(NF)}')
-  cd $repodir && git sparse-checkout set $@
-  mv -f $@ ../package
-  cd .. && rm -rf $repodir
-}
+  branch="$1" rurl="$2" && shift 2
+  rootdir="$PWD"
+  git clone -b $branch --depth 1 --filter=blob:none --sparse $rurl temp_sparse
+  #git clone -b $branch --single-branch --no-tags --depth 1 --filter=blob:none --no-checkout $rurl temp_sparse
+  cd temp_sparse
+  git sparse-checkout init --cone
+  git sparse-checkout set $@
+  pkg=`echo $@ | tr ' ' '\n' | rev | cut -d'/' -f 1 | rev | tr '\n' ' ' `
+  #git checkout $branch -- $@
+  [ -d ../package/custom ] && cd ../package/custom && rm -rf $pkg && cd "$rootdir"/temp_sparse
+  mv -n $@ ../
+  cd ..
+  rm -rf temp_sparse
+  }
 
 # 添加额外插件
 git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
