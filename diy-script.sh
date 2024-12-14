@@ -87,7 +87,7 @@ git_sparse_clone main https://github.com/morytyann/OpenWrt-mihomo package/luci-a
 git_sparse_clone main https://github.com/morytyann/OpenWrt-mihomo package/mihomo 
 #git_sparse_clone main https://github.com/kenzok8/small-package luci-app-adguardhome
 
-git_sparse_clon main https://github.com/sirpdboy/sirpdboy-package luci-app-fileassistant
+git_sparse_clone main https://github.com/sirpdboy/sirpdboy-package luci-app-fileassistant
 
 
 # 科学上网插件
