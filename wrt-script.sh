@@ -29,8 +29,8 @@ function git_sparse_clone() {
 # Alist & AdGuardHome & WolPlus & AriaNg & 集客无线AC控制器 & Lucky & 雅典娜LED控制 & Go
 #git clone --depth=1 https://github.com/sbwml/luci-app-alist package/luci-app-alist
 git_sparse_clone main https://github.com/kenzok8/small-package adguardhome luci-app-adguardhome
-git_sparse_clone main https://github.com/VIKINGYFY/packages luci-app-wolplus
-git_sparse_clone main https://github.com/VIKINGYFY/packages luci-app-advancedplus
+git clone --depth=1 https://github.com/animegasan/luci-app-wolplus package/luci-app-wolplus
+git clone --depth=1 https://github.com/sirpdboy/luci-app-advancedplus package/luci-app-advancedplus
 git_sparse_clone main https://github.com/morytyann/OpenWrt-mihomo mihomo luci-app-mihomo
 git_sparse_clone main https://github.com/sirpdboy/sirpdboy-package luci-app-fileassistant
 git_sparse_clone master https://github.com/immortalwrt/packages net/ariang
@@ -42,7 +42,7 @@ git clone --depth=1 https://github.com/sbwml/packages_lang_golang -b 23.x feeds/
 
 # Themes
 git clone --depth=1 https://github.com/sirpdboy/luci-theme-kucat package/luci-theme-kucat
-git clone --depth=1 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
+git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
 
 # msd_lite
 git clone --depth=1 https://github.com/ximiTech/luci-app-msd_lite package/luci-app-msd_lite
