@@ -31,7 +31,7 @@ function git_sparse_clone() {
 git_sparse_clone main https://github.com/kenzok8/small-package adguardhome luci-app-adguardhome
 git clone --depth=1 https://github.com/animegasan/luci-app-wolplus package/luci-app-wolplus
 git clone --depth=1 https://github.com/sirpdboy/luci-app-advancedplus package/luci-app-advancedplus
-git_sparse_clone main https://github.com/morytyann/OpenWrt-mihomo mihomo luci-app-mihomo
+#git_sparse_clone main https://github.com/morytyann/OpenWrt-mihomo mihomo luci-app-mihomo
 git_sparse_clone main https://github.com/sirpdboy/sirpdboy-package luci-app-fileassistant
 git_sparse_clone master https://github.com/immortalwrt/packages net/ariang
 #git clone --depth=1 https://github.com/lwb1978/openwrt-gecoosac package/openwrt-gecoosac
