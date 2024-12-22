@@ -36,7 +36,7 @@ git_sparse_clone main https://github.com/sirpdboy/sirpdboy-package luci-app-file
 git_sparse_clone master https://github.com/immortalwrt/packages net/ariang
 #git clone --depth=1 https://github.com/lwb1978/openwrt-gecoosac package/openwrt-gecoosac
 #git clone --depth=1 https://github.com/gdy666/luci-app-lucky package/luci-app-lucky
-git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall package/luci-app-passwall
+#git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall package/luci-app-passwall
 git_sparse_clone master https://github.com/vernesong/OpenClash luci-app-openclash
 git clone --depth=1 https://github.com/sbwml/packages_lang_golang -b 23.x feeds/packages/lang/golang
 
