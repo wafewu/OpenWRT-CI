@@ -39,7 +39,6 @@ git_sparse_clone master https://github.com/immortalwrt/packages net/ariang
 #git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall package/luci-app-passwall
 git_sparse_clone master https://github.com/vernesong/OpenClash luci-app-openclash
 git clone --depth=1 https://github.com/sbwml/packages_lang_golang -b 23.x feeds/packages/lang/golang
-
 git_sparse_clone main https://github.com/wafewu/Packages luci-app-wolplus
 
 # Themes
