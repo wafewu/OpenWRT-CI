@@ -41,7 +41,7 @@ git_sparse_clone master https://github.com/vernesong/OpenClash luci-app-openclas
 git clone --depth=1 https://github.com/sbwml/packages_lang_golang -b 23.x feeds/packages/lang/golang
 git_sparse_clone main https://github.com/wafewu/Packages luci-app-wolplus
 
-git_sparse_clone master https://github.com/kenzok8/small luci-app-ssr-plus shadowsocks-rust shadowsocksr-libev
+#git_sparse_clone master https://github.com/kenzok8/small luci-app-ssr-plus shadowsocks-rust shadowsocksr-libev
 
 # Themes
 git clone --depth=1 https://github.com/sirpdboy/luci-theme-kucat package/luci-theme-kucat
