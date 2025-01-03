@@ -41,6 +41,8 @@ git clone --depth=1 https://github.com/sbwml/packages_lang_golang -b 23.x feeds/
 git_sparse_clone main https://github.com/wafewu/Packages luci-app-wolplus
 #git_sparse_clone main https://github.com/wafewu/Packages luci-app-fileassistant
 
+git_sparse_clone master https://github.com/kenzok8/small shadowsocks-rust shadowsocks-rust v2ray-core v2ray-geodata v2ray-geodata v2ray-geodata v2raya xray-core xray-plugin
+
 #git_sparse_clone master https://github.com/kenzok8/small luci-app-ssr-plus shadowsocks-rust shadowsocksr-libev
 
 # Themes
