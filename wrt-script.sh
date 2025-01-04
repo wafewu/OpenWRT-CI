@@ -55,7 +55,7 @@ git clone --depth=1 https://github.com/ximiTech/msd_lite package/msd_lite
 
 # MosDNS
 rm -rf feeds/packages/net/mosdns
-rm -rf feeds/packages/net/v2ray-geodata
+#rm -rf feeds/packages/net/v2ray-geodata
 
 git_sparse_clone v5 https://github.com/sbwml/luci-app-mosdns v2dat
 git_sparse_clone v5 https://github.com/sbwml/luci-app-mosdns mosdns
