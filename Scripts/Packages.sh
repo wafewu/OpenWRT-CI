@@ -74,8 +74,10 @@ UPDATE_PACKAGE "qmodem" "FUjr/QModem" "main"
 UPDATE_PACKAGE "quickfile" "sbwml/luci-app-quickfile" "main"
 UPDATE_PACKAGE "viking" "VIKINGYFY/packages" "main" "" "luci-app-timewol luci-app-wolplus"
 UPDATE_PACKAGE "vnt" "lmq8267/luci-app-vnt" "main"
-
+UPDATE_PACKAGE "luci-app-adguardhome" "kenzok8/small-package" "main" "pkg"
+UPDATE_PACKAGE "adguardhome" "kenzok8/small-package" "main" "pkg"
 UPDATE_PACKAGE "argon" "wafewu/luci-theme-argon" "master"
+UPDATE_PACKAGE "luci-app-argon-config" "kenzok8/small-package" "main" "pkg"
 
 #更新软件包版本
 UPDATE_VERSION() {
