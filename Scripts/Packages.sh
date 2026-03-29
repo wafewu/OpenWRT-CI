@@ -78,6 +78,8 @@ UPDATE_PACKAGE "adguardhome" "kenzok8/openwrt-packages" "master" "pkg"
 UPDATE_PACKAGE "argon" "wafewu/luci-theme-argon" "master"
 UPDATE_PACKAGE "luci-app-argon-config" "kenzok8/openwrt-packages" "master"
 
+UPDATE_PACKAGE "luci-app-timecontrol" "sirpdboy/luci-app-timecontrol" "main"
+
 #更新软件包版本
 UPDATE_VERSION() {
 	local PKG_NAME=$1
