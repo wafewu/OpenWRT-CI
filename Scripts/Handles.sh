@@ -75,15 +75,13 @@ if [ -f "$RUST_FILE" ]; then
 	cd $PKG_PATH && echo "rust has been fixed!"
 fi
 
-#修复DiskMan编译失败
-DM_FILE="./luci-app-diskman/applications/luci-app-diskman/Makefile"
-if [ -f "$DM_FILE" ]; then
-	echo " "
+#修改mini-diskmanager菜单位置
+if [ -d *"luci-app-mini-diskmanager"* ]; then
+	echo " " && cd ./luci-app-mini-diskmanager/
 
-	sed -i 's/fs-ntfs/fs-ntfs3/g' $DM_FILE
-	sed -i '/ntfs-3g-utils /d' $DM_FILE
+	sed -i "s/services/system/g" ./luci-app-mini-diskmanager/root/usr/share/luci/menu.d/luci-app-mini-diskmanager.json
 
-	cd $PKG_PATH && echo "diskman has been fixed!"
+	cd $PKG_PATH && echo "mini-diskmanager has been fixed!"
 fi
 
 #修复luci-app-netspeedtest相关问题
